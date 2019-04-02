@@ -82,7 +82,7 @@ namespace LimespotAssignment.Controllers
         }
 
         //Remove Transformer
-        [HttpPost("remove", Name = "RemoveTransformer")]
+        [HttpDelete("remove", Name = "RemoveTransformer")]
         public async Task<IActionResult> RemoveTransformer(int transformerid)
         {
             var transformerObject = await GetTransformer(transformerid);
