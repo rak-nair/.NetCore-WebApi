@@ -60,7 +60,7 @@ namespace LimespotAssignment.Controllers
         }
 
         //Update Transformer
-        [HttpPost("update", Name = "UpdateTransformer")]
+        [HttpPatch("update", Name = "UpdateTransformer")]
         public async Task<IActionResult> UpdateTransformer(int transformerid, [FromBody] TransformerUpdateViewModel updatedTransformerViewModel)
         {
             if (ModelState.IsValid)
