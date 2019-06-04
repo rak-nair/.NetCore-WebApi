@@ -1,6 +1,6 @@
 # LimespotAssignment
 
-The assignment itself  - 
+**The assignment itself**
  
 The Transformers.  The Autobots and Decepticons are a race of mechanical beings at war on the planet Cybertron. They have been battling it out for centuries but have decided that the only real way to end their war is through a computerized simulation. 
  
@@ -59,5 +59,40 @@ Rules of battle (in order of preference):
 The end result of a battle should be a list of the survivors/victors on each side.  
  
 The sides do not have to be equal numbers to have a battle.  For example, 5 Autobots vs. 3 Decepticons should only have 3 battles, with the other 2 Decepticons being counted as survivors.  
- 
+
 Special note: if Optimus is on one team and Predaking is on another team, the battle ends **with no victors on either side. ** 
+
+
+**The SOLUTION -** 
+I've implemented a .NetCore WebAPI.
+
+INSTRUCTIONS
+Simply download and run. The project will create a DB, inside of localdb, and add “Optimus” and “Predaking” as special
+transformer names.
+No other seed data is available, please use the endpoints to insert data.
+
+UNDER THE HOOD
+1. All controller methods return Task<IActionResult>, however, whether the async-await actually helps the
+performance is something that needs to be tested.
+2. I use EFCore with NoTracking behavior which should in theory help the performance.
+The Data service also employs the async-await paradigm.
+3. There is a xUnit test project that tests the Controller and the WarResolver logic.
+4. The only NuGet package I added outside of .net core packages was for Moq.
+
+ENDPOINTS
+
+Add Autobots HTTPPOST /api/Transformers/add/autobot
+Add Decepticons HTTPPOST /api/Transformers/add/decepticon
+Get Transformer Details HTTPGET /api/ Transformers/get?transformerid=id
+Update Transformer HTTPATCH /api/ Transformers/update?transformerid=id (pseudo Patch behavior, please check code)
+Remove Transformer HTTPDELETE /api/ Transformers/remove?transformerid=id
+List Autobots HTTPGET /api/ Transformers/list/autobots
+List Decepticons HTTPGET /api/ Transformers/list/decepticons
+Get Overall Score HTTPGET /api/ Transformers/overallscore?transformerid=id
+Wage War HTTPGET /api/ Transformers/wagewar
+
+IMPROVEMENTS
+1. Using FluentAssertions, I looked at it and I like it. I have not had the time to include this yet.
+2. Implementing full PATCH behavior for the Update operation (http://jsonpatch.com/).
+ 
+
