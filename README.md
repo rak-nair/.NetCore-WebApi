@@ -81,15 +81,15 @@ The Data service also employs the async-await paradigm.
 
 ENDPOINTS
 
-Add Autobots HTTPPOST /api/Transformers/add/autobot
-Add Decepticons HTTPPOST /api/Transformers/add/decepticon
-Get Transformer Details HTTPGET /api/ Transformers/get?transformerid=id
-Update Transformer HTTPATCH /api/ Transformers/update?transformerid=id (pseudo Patch behavior, please check code)
-Remove Transformer HTTPDELETE /api/ Transformers/remove?transformerid=id
-List Autobots HTTPGET /api/ Transformers/list/autobots
-List Decepticons HTTPGET /api/ Transformers/list/decepticons
-Get Overall Score HTTPGET /api/ Transformers/overallscore?transformerid=id
-Wage War HTTPGET /api/ Transformers/wagewar
+1. Add Autobots HTTPPOST /api/Transformers/add/autobot
+2. Add Decepticons HTTPPOST /api/Transformers/add/decepticon
+3. Get Transformer Details HTTPGET /api/ Transformers/get?transformerid=id
+4. Update Transformer HTTPATCH /api/ Transformers/update?transformerid=id (pseudo Patch behavior, please check code)
+5. Remove Transformer HTTPDELETE /api/ Transformers/remove?transformerid=id
+6. List Autobots HTTPGET /api/ Transformers/list/autobots
+7. List Decepticons HTTPGET /api/ Transformers/list/decepticons
+8. Get Overall Score HTTPGET /api/ Transformers/overallscore?transformerid=id
+9. Wage War HTTPGET /api/ Transformers/wagewar
 
 IMPROVEMENTS
 1. Using FluentAssertions, I looked at it and I like it. I have not had the time to include this yet.
