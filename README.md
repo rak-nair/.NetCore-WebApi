@@ -1,4 +1,4 @@
-# LimespotAssignment
+# .NetCore WebApiAssignment
 
 **The assignment itself**
  
