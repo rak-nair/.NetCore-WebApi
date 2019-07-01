@@ -1,6 +1,6 @@
-# .NetCore WebApiAssignment
+# .NetCore 
 
-**The assignment itself**
+**The problem itself**
  
 The Transformers.  The Autobots and Decepticons are a race of mechanical beings at war on the planet Cybertron. They have been battling it out for centuries but have decided that the only real way to end their war is through a computerized simulation. 
  
